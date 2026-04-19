@@ -2,15 +2,26 @@ body {
     font-family: sans-serif;
     background-color: #eeeeee;
     color: #000000;
+    margin: 0;
+    padding-top: 80px;
+    transition: 0.4s;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
 }
 
 header {
-    background-color: #333333;
+    background-color: #000080; 
     color: white;
     padding: 10px;
     text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 }
-
 
 nav ul {
     list-style-type: none;
@@ -25,21 +36,41 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
+/* seções */
 section {
     background-color: white;
     margin: 20px;
     padding: 15px;
     border: 1px solid #cccccc;
+    border-radius: 8px;
 }
 
-#contato form {
-    display: block;
+/* seções no modo escuro */
+body.dark-mode section {
+    background-color: #1e1e1e;
+    border-color: #444444;
 }
 
+/* formulário e botoes */
 input, textarea {
     display: block;
     margin-bottom: 10px;
     width: 90%;
+    padding: 8px;
+}
+
+.btn, button#botao-tema {
+    background-color: #000080; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn:hover, button#botao-tema:hover {
+    background-color: #000050;
 }
