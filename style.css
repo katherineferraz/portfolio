@@ -1,10 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: sans-serif;
     background-color: #eeeeee;
     color: #000000;
-    margin: 0;
-    padding-top: 80px;
-    transition: 0.4s;
+    line-height: 1.6;
+    padding-top: 100px;
+    transition: background 0.4s, color 0.4s; 
 }
 
 body.dark-mode {
@@ -15,22 +21,29 @@ body.dark-mode {
 header {
     background-color: #000080; 
     color: white;
-    padding: 10px;
-    text-align: center;
+    padding: 15px 0;
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 1000;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
 }
 
 nav ul {
     list-style-type: none;
-    padding: 0;
+    padding: 10px 0;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 15px;
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -39,11 +52,28 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* seções */
+/* botão troca de tema */
+#botao-tema {
+    background-color: #ffffff;
+    color: #000080; 
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+#botao-tema:hover {
+    background-color: #dddddd;
+}
+
+/* seções do site */
 section {
     background-color: white;
-    margin: 20px;
-    padding: 15px;
+    margin: 20px auto;
+    padding: 20px;
     border: 1px solid #cccccc;
     border-radius: 8px;
 }
@@ -54,23 +84,47 @@ body.dark-mode section {
     border-color: #444444;
 }
 
-/* formulário e botoes */
-input, textarea {
-    display: block;
-    margin-bottom: 10px;
-    width: 90%;
-    padding: 8px;
+h1, h2 {
+    margin-bottom: 15px;
+    color: #000080; 
 }
 
-.btn, button#botao-tema {
-    background-color: #000080; 
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
+body.dark-mode h1, body.dark-mode h2 {
+    color: #4da6ff; 
+}
+
+/* FORMULÁRIO */
+.form-group {
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-.btn:hover, button#botao-tema:hover {
+.btn {
+    background-color: #000080; 
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn:hover {
     background-color: #000050;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #666;
 }
