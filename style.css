@@ -1,0 +1,45 @@
+body {
+    font-family: sans-serif;
+    background-color: #eeeeee;
+    color: #000000;
+}
+
+header {
+    background-color: #333333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    background-color: white;
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #cccccc;
+}
+
+#contato form {
+    display: block;
+}
+
+input, textarea {
+    display: block;
+    margin-bottom: 10px;
+    width: 90%;
+}
